@@ -81,8 +81,8 @@ for i in nome:
 
 nome = ["DANILO", "VILSON", "JOAO"]
 
-# Enumerate retornar um par de chave e valor
-# O for percorre cada elemento dentro do vetor nome, retornando uma chave "index" e seu valor
+# Enumerate retornar um par de indice e valor
+# O for percorre cada elemento dentro do vetor nome, retornando uma indice "index" e seu valor
 for key, value in enumerate(nome):
     print(key, value)
 print("-------------------------")
