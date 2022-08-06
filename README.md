@@ -8,4 +8,4 @@ A disciplina ministrada pelo professor Vilson Francisco Maziero.
 
 ## _Conteúdo Abordado_:
 
-- Revisão de Listas, Pilhas e Fila;
+- Introdução a Linguagem Python;
