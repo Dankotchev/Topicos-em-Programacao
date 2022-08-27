@@ -79,15 +79,9 @@ Dado um número N, determine a quantidade de passos, aplicando-se as regras do P
 _Por Tiago Alexandre Dócusse (IFSP – campus Barretos)_
 
 Rafael é um brilhante aluno e adora matemática. Um dia, fazendo um treinamento para a olimpíada de matemática, se deparou com o seguinte problema: Uma função _f_ é definida da seguinte forma:
-$$
-f(x) = 
-\left\{
-\begin {array} {ll}
-x - 3, &x >= 10.000.000\\
-f(f(f(x + 13))), &x < 10.000.000\\
-\end {array}
-\right.
-$$
+
+![Definição da funçao f](https://images2.imgbox.com/4f/f7/GsybEiXq_o.png)
+
 Rafael até conseguiu calcular o resultado da função para alguns valores de x. No entanto, ele não possui todas as respostas, e pediu a sua ajuda para criar um programa que calcule as respostas da função. Você consegue ajudar Rafael no seu treinamento?
 
 **Entrada:** A entrada é formada por um único número inteiro x que deve ser usado para calcular o resultado da função, sendo 0 < x < 20.000.000.
