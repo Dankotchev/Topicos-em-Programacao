@@ -22,7 +22,7 @@ for letra in segredo:
 posicao = 0
 # Cifrando a mensagem no texto de Transporte
 for l in textoTransporte:
-    if l != ' ':
+    if l not in " .,0123456789?!":
         if posicao > len(binaryText) - 1:
             fraseFinal.append(
                 l.lower())  # Caso o texto de transporte seja maior que o segredo, todas as letras ficam minusculas
