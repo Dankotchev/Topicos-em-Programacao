@@ -1,24 +1,40 @@
 from builtins import len
+textoTransporte = ''
 segredo = input("Segredo: ")
+fraseFinal = []
 
-def binaryToDecimal(n):
-    return int(n, 2) if n != "" else 0
+def binaryToDecimal(binario):
+    return int(binario, 2) if binario != "" else 0
 
-def decimalToBinary(n):
-    return int(n, 10) if n != "" else 0
+def decimalToBinary(decimal):
+    binario = ''
+    while decimal > 0:
+        binario += str(decimal % 2)
+        decimal //= 2
+    while len(binario) < 8:
+        binario += '0'
+    return binario[::-1]
 
 def traduza(entrada):
   volta = "".join(["0" if x.islower() else "1" for x in entrada])
   return volta
 
+def traslateToBinary(texto, binario):
+    for xB, vB in binario:
+        if vB == '0':
+
+
+    return  "".join([])
+
+
 frase=[]
 # texto = "".join([x for x in texto if x not in " .,0123456789"])
 for x in segredo:
-    a = decimalToBinary(ord(x))
-    print(a)
-#    print(str(ord(x))))
-
-
+    binary = decimalToBinary(ord(x))     # Uma letra é transformada em um string de 0/1
+    for oitoLetras in range(8, len(textoTransporte), 8):
+        parte = traslateToBinary(oitoLetras, binary)
+        fraseFinal.append(parte)
+print("".join(fraseFinal))
 
 
 """    
