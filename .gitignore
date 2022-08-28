@@ -412,3 +412,7 @@ cython_debug/
 *.code-workspace
 
 # End of https://www.toptal.com/developers/gitignore/api/java,eclipse,netbeans,visualstudiocode,python,pycharm,jupyternotebooks
+
+# Ignore arquivos de saída gerados pelos programas
+Saida*.txt
+Saida*.csv
