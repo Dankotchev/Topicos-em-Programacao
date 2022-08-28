@@ -1,7 +1,4 @@
 from builtins import len
-textoTransporte = ''
-segredo = input("Segredo: ")
-fraseFinal = []
 
 def binaryToDecimal(binario):
     return int(binario, 2) if binario != "" else 0
@@ -19,25 +16,35 @@ def traduza(entrada):
   volta = "".join(["0" if x.islower() else "1" for x in entrada])
   return volta
 
-def traslateToBinary(texto, binario):
-    for xB, vB in binario:
-        if vB == '0':
 
+textoTransporte = input("Texto de Transporte: ")
+segredo = input("Segredo: ")
+fraseFinal = []
+binaryText = ''
 
-    return  "".join([])
+# Transformando a frase segredo em uma string de 0 e 1
+for letra in segredo:
+    binary = decimalToBinary(ord(letra))     # Uma letra é transformada em um string de 0/1
+    binaryText += binary
 
-
-frase=[]
-# texto = "".join([x for x in texto if x not in " .,0123456789"])
-for x in segredo:
-    binary = decimalToBinary(ord(x))     # Uma letra é transformada em um string de 0/1
-    for oitoLetras in range(8, len(textoTransporte), 8):
-        parte = traslateToBinary(oitoLetras, binary)
-        fraseFinal.append(parte)
+posicao = 0
+# Cifrando a mensagem no texto de Transporte
+for l in textoTransporte:
+    if l != ' ':
+        if posicao > len(binaryText) -1:
+            fraseFinal.append(l.lower())    # Caso o texto de trasnporte seja maior que o segredo, todas as letras ficam minusculas
+        else:
+            if  binaryText[posicao] == "0":
+                fraseFinal.append(l.lower())
+            else:
+                fraseFinal.append(l.upper())
+        posicao += 1
+    else:
+        fraseFinal.append(l)
 print("".join(fraseFinal))
 
 
-"""    
+"""
 for x in range(8, len(texto), 8):
       caracter = binaryToDecimal(traduza(texto[x-8:x]))
       if caracter != 0:
