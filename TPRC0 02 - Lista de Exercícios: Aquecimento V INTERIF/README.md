@@ -1,6 +1,6 @@
 # Lista de Exercícios: Aquecimento V Maratona de Programação INTERIF 2022
 
-## [Problema A: _Esteganografia_](https://github.com/Dankotchev/Topicos-em-Programacao/blob/main/TPRC0%2002%20-%20Lista%20de%20Exerc%C3%ADcios:%20Aquecimento%20V%20INTERIF/esteganografia.py)
+## [Problema A: _Esteganografia_](https://github.com/Dankotchev/Topicos-em-Programacao/blob/main/TPRC0%2002%20-%20Lista%20de%20Exerc%C3%ADcios:%20Aquecimento%20V%20INTERIF/trade.py)
 
 _Por Cássio Agnaldo Onodera (IFSP – campus Birigui)_
 
