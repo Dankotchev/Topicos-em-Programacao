@@ -1,0 +1,4 @@
+idVenda
+idProduto
+quantidade
+valor

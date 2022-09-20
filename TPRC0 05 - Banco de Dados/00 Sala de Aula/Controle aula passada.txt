@@ -1,0 +1,71 @@
+
+class ControleAluno:
+    __lista = []
+
+    def __init__(self):
+        self.__lista = []
+
+    def incluir(self, aluno):
+        self.__lista.append(aluno)
+
+    def procuraRegistro(self, entrada):
+        volta = Aluno()
+        for i in self.__lista:
+            if i.registro == entrada:
+                volta = i
+        return volta
+
+    def listaTodos(self):
+        return self.__lista
+
+
+def cadastrar():
+    aluno = Aluno()
+    aluno.nome = input("Nome: ")
+    aluno.endereco = input("Enderco: ")
+    aluno.nascimento = input("Data de Nascimento")
+    aluno.registro = input("Registro")
+    return aluno
+
+
+def consultar(registro):
+    aluno = Aluno()
+    aluno = daoAluno.procuraRegistro(registro)
+    return aluno
+
+
+def gravar():
+    nome = "D:/megasena.csv"
+    with open(nome) as f:
+        dados = f.read().split('\n')
+
+    with open('D:/dados.sql', "w") as escrita:
+        for i in dados:
+            escrita.write()
+
+    f.close()
+    escrita.close()
+
+
+flag = True
+daoAluno = ControleAluno()
+while flag:
+    print("1-Cadastrar \n 2-Consultar \n 3-Lista Todos \n 4-Gravar em Disco \n 0-Sair")
+
+    opcao = int(input("Escolha uma opcao:"))
+    if opcao == 0:
+        flag = False
+    elif opcao == 1:
+        a = cadastrar()
+        daoAluno.incluir(a)
+    elif opcao == 2:
+        reg = input("Qual registro deseja consultar:")
+        aluno = consultar(reg)
+        print(aluno)
+    elif opcao == 3:
+        dados = daoAluno.listaTodos()
+        for i in dados:
+            print(i)
+    elif opcao == 4:
+        gravar()
+
