@@ -28,7 +28,6 @@ def alterarAluno(chave):
     return aluno
 
 
-
 flag = True
 daoAluno = ControleAluno()
 aluno = Aluno()
@@ -55,10 +54,17 @@ while flag:
         aluno = daoAluno.procuraRegistro(chave)
         print(aluno)
 
-
     if opcao == 3:
         chave = int(input("Informe o id do aluno: "))
         aluno = daoAluno.procuraRegistro(chave)
         print(aluno)
         aluno = alterarAluno(chave)
         daoAluno.alterar(aluno)
+
+    if opcao == 5:
+        print('-------------')
+        a = daoAluno.procuraJson(1)
+        a = json.loads(a)
+
+        print(a.get('nome'), a.get('endereco'))
+        print(a['nascimento'])

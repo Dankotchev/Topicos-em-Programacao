@@ -1,3 +1,5 @@
+import json
+
 from ConectarBancoDados import *
 from aluno import *
 
@@ -64,6 +66,22 @@ class ControleAluno:
             retorno.nascimento = aluno[0][7]
         return retorno
 
-    def listaTodos (self):
+    # Utilizando JSON para transportar dados
+    def procurarJSON(self, entrada):
+        dados = self.procuraRegistro(entrada)
+        retorno = {}
+        retorno = {
+            'idaluno'   : dados.idaluno,
+            'nome'      : dados.nome,
+            'flag'      : dados.flag,
+            'endereco'  : dados.endereco,
+            'cidade'    : dados.cidade,
+            'uf'        : dados.uf,
+            'cep'       : dados.cep,
+            'nascimento': '{}'.format(dados.nascimento)
+        }
+        return json.dumps(retorno)
+
+    def listaTodos(self):
         return self.__lista
 

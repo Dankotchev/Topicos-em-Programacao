@@ -1,12 +1,12 @@
-from ConectarBancoDados import *
-import ItemVenda
+from CBD import *
+from ..modelo.ItemVenda import *
 
 class ControleItemVenda:
 
     def __init__(self):
         self.__lista = []
         self.ob = Banco()
-        self.ob.configura(ho="localhost", db="aula_python", us="root", se="ifsp")
+        self.ob.configura(ho="localhost", db="bd_trabalho_python", us="root", se="dknilo")
 
     def incluir(self, itemvenda):
         self.ob.abrirConexao();
