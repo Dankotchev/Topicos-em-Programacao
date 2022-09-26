@@ -2,7 +2,7 @@ create database bd_trabalho_python;
 use bd_trabalho_python;
 
 CREATE TABLE cliente (
-    idcliente   INT AUTO_INCREMENT PRIMARY KEY,
+    idCliente   INT AUTO_INCREMENT PRIMARY KEY,
     nome        VARCHAR (60),
     endereco    VARCHAR(60),
     telefone    VARCHAR(18),
@@ -13,27 +13,27 @@ CREATE TABLE cliente (
 );
 
 CREATE TABLE venda (
-    idvenda         INT AUTO_INCREMENT,
+    idVenda         INT AUTO_INCREMENT,
     data            DATE,
     valortotal      DECIMAL(10,2),
-    idcliente       INT NOT NULL,
-    PRIMARY KEY (idvenda),
-    FOREIGN KEY (idcliente) REFERENCES cliente (idcliente)
+    idCliente       INT NOT NULL,
+    PRIMARY KEY (idVenda),
+    FOREIGN KEY (idCliente) REFERENCES cliente (idCliente)
 );
 
 CREATE TABLE produto (
-    idproduto       INT AUTO_INCREMENT PRIMARY KEY,
+    idProduto       INT AUTO_INCREMENT PRIMARY KEY,
     nome            VARCHAR(60),
     quantidade      INT,
     valor           DECIMAL(10,2)
 );
 
 CREATE TABLE item_venda(
-    idvenda         INT NOT NULL,
-    idproduto       INT NOT NULL,
+    idVenda         INT NOT NULL,
+    idProduto       INT NOT NULL,
     quantidade      INT NOT NULL,
     valor           DECIMAL(10,2) NOT NULL,
-    PRIMARY KEY (idvenda, idproduto),
-    FOREIGN KEY (idvenda)   REFERENCES venda (idvenda),
-    FOREIGN KEY (idproduto) REFERENCES produto (idproduto)
+    PRIMARY KEY (idVenda, idProduto),
+    FOREIGN KEY (idVenda)   REFERENCES venda (idVenda),
+    FOREIGN KEY (idProduto) REFERENCES produto (idProduto)
 );

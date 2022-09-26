@@ -1,7 +1,7 @@
 class Cliente: 
 
    def __init__(self):
-        __idcliente = '' 
+        __idCliente = '' 
         __nome = '' 
         __endereco = '' 
         __telefone = '' 
@@ -11,8 +11,8 @@ class Cliente:
         __cep = '' 
 
    @property 
-   def idcliente(self): 
-       return self.__idcliente 
+   def idCliente(self): 
+       return self.__idCliente 
 
    @property 
    def nome(self): 
@@ -42,9 +42,9 @@ class Cliente:
    def cep(self): 
        return self.__cep 
 
-   @idcliente.setter 
-   def idcliente(self,entrada): 
-       self.__idcliente = entrada
+   @idCliente.setter 
+   def idCliente(self,entrada): 
+       self.__idCliente = entrada
 
    @nome.setter 
    def nome(self,entrada): 

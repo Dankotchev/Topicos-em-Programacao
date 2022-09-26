@@ -1,14 +1,14 @@
 class Venda: 
 
    def __init__(self):
-        __idvenda = '' 
+        __idVenda = '' 
         __data = '' 
         __valortotal = '' 
-        __idcliente = '' 
+        __idCliente = '' 
 
    @property 
-   def idvenda(self): 
-       return self.__idvenda 
+   def idVenda(self): 
+       return self.__idVenda 
 
    @property 
    def data(self): 
@@ -19,12 +19,12 @@ class Venda:
        return self.__valortotal 
 
    @property 
-   def idcliente(self): 
-       return self.__idcliente 
+   def idCliente(self): 
+       return self.__idCliente 
 
-   @idvenda.setter 
-   def idvenda(self,entrada): 
-       self.__idvenda = entrada
+   @idVenda.setter 
+   def idVenda(self,entrada): 
+       self.__idVenda = entrada
 
    @data.setter 
    def data(self,entrada): 
@@ -34,12 +34,13 @@ class Venda:
    def valortotal(self,entrada): 
        self.__valortotal = entrada
 
-   @idcliente.setter 
-   def idcliente(self,entrada): 
-       self.__idcliente = entrada
+   @idCliente.setter 
+   def idCliente(self,entrada): 
+       self.__idCliente = entrada
 
    def __eq__(self,entrada): 
        self.__xxxxxxxxxxx == entrada.xxxxxxx
 
    def __repr__(self,entrada): 
-       return self.__xxxxxxxxxxx 
+       return "Id Venda #{}\tId Cliente #{}\nData da Venda: {}\tTotal da Venda: R$ {}"\
+           .format(self.idVenda, self.idCliente, self.data, self.valortotal)

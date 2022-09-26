@@ -1,6 +1,3 @@
-from CBD import *
-from ..modelo.Produto import *
-
 class ControleProduto:
 
     def __init__(self):

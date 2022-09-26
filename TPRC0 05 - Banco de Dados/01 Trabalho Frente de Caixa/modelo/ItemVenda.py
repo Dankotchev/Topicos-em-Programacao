@@ -42,4 +42,5 @@ class ItemVenda:
        self.__xxxxxxxxxxx == entrada.xxxxxxx
 
    def __repr__(self,entrada): 
-       return self.__xxxxxxxxxxx 
+       return "Id Produto #{}\tQuantidade: {}\tValor uni: R${}"\
+           .format(self.idProduto, self.quantidade, self.valor)

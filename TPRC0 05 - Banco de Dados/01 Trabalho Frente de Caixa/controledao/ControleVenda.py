@@ -1,6 +1,3 @@
-from CBD import *
-from ..modelo.Venda import *
-
 class ControleVenda:
 
     def __init__(self):
@@ -11,10 +8,10 @@ class ControleVenda:
     def incluir(self, venda):
         self.ob.abrirConexao();
         sql = "INSERT INTO venda VALUES values({}, '{}', {}, {})".format(
-                                                                    venda.idvenda,
+                                                                    venda.idVenda,
                                                                     venda.data,
                                                                     venda.valortotal,
-                                                                    venda.idcliente)
+                                                                    venda.idCliente)
         print(sql)
         try:
             self.ob.execute(sql)
@@ -25,12 +22,12 @@ class ControleVenda:
 
     def alterar(self, venda):
         self.ob.abrirConexao();
-        sql = "UPDATE venda SET data = '{}', valortotal = {}, idcliente = {}" \
-              "WHERE idvenda = {}".format(
+        sql = "UPDATE venda SET data = '{}', valortotal = {}, idCliente = {}" \
+              "WHERE idVenda = {}".format(
                                     venda.data,
                                     venda.valortotal,
-                                    venda.idcliente,
-                                    venda.idvenda)
+                                    venda.idCliente,
+                                    venda.idVenda)
         print(sql)
         try:
             self.ob.execute(sql)
@@ -43,13 +40,13 @@ class ControleVenda:
 
     def procuraRegistro(self,entrada):
         self.ob.abrirConexao();
-        resultQuery = self.ob.selectQuery("SELECT * FROM venda WHERE idvenda = {}".format(entrada))
+        resultQuery = self.ob.selectQuery("SELECT * FROM venda WHERE idVenda = {}".format(entrada))
         retorno = Venda()
         if len(resultQuery) >= 1:
-            retorno.idvenda = resultQuery[0][0]
+            retorno.idVenda = resultQuery[0][0]
             retorno.data = resultQuery[0][1]
             retorno.valortotal = resultQuery[0][2]
-            retorno.idcliente = resultQuery[0][3]
+            retorno.idCliente = resultQuery[0][3]
         return retorno
 
     def listarTodos(self):
@@ -58,9 +55,9 @@ class ControleVenda:
         print(dados)
         for venda in dados:
             retorno = Venda()
-            retorno.idvenda = venda[0]
+            retorno.idVenda = venda[0]
             retorno.data = venda[1]
             retorno.valortotal = venda[2]
-            retorno.idcliente = venda[3]
+            retorno.idCliente = venda[3]
         return dados
 

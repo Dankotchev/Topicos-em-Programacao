@@ -1,7 +1,11 @@
-from ..modelo.Cliente import *
-from CBD import *
+import sys
 
+# sys.path.insert(0,'../controledao')
+# sys.path.insert(1,'../modelo')
+# from CBD import *
 
+import controledao.CBD
+from . import CBD
 
 class ControleCliente:
 
@@ -11,9 +15,9 @@ class ControleCliente:
         self.ob.configura(ho="localhost", db="bd_trabalho_python", us="root", se="dknilo")
 
     def incluir(self, cliente):
-        self.ob.abrirConexao();
+        self.ob.abrirConexao()
         sql = "insert into cliente values({}, '{}', '{}','{}','{}','{}','{}', '{}')".format(
-            cliente.idcliente,
+            cliente.idCliente,
             cliente.nome,
             cliente.endereco,
             cliente.telefone,
@@ -33,7 +37,7 @@ class ControleCliente:
         self.ob.abrirConexao();
         sql = "UPDATE cliente SET nome = '{}', endereco = '{}', " \
               "telefone '{}', email = '{}', cidade = '{}', uf = '{}', cep = '{}' " \
-              "WHERE idcliente = {}".format(
+              "WHERE idCliente = {}".format(
             cliente.nome,
             cliente.endereco,
             cliente.telefone,
@@ -41,7 +45,7 @@ class ControleCliente:
             cliente.cidade,
             cliente.uf,
             cliente.cep,
-            cliente.idcliente)
+            cliente.idCliente)
         print(sql)
         try:
             self.ob.execute(sql)
@@ -51,11 +55,11 @@ class ControleCliente:
             self.ob.descarte()
 
     def procuraRegistro(self, entrada):
-        self.ob.abrirConexao();
-        cliente = self.ob.selectQuery("SELECT * FROM cliente WHERE idcliente = {}".format(entrada))
+        self.ob.abrirConexao()
+        cliente = self.ob.selectQuery("SELECT * FROM cliente WHERE idCliente = {}".format(entrada))
         retorno = Cliente()
         if len(cliente) >= 1:
-            retorno.idcliente = cliente[0][0]
+            retorno.idCliente = cliente[0][0]
             retorno.nome = cliente[0][1]
             retorno.endereco = cliente[0][2]
             retorno.telefone = cliente[0][3]

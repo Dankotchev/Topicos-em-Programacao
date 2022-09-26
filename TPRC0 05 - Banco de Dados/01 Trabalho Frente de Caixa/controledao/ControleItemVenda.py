@@ -1,6 +1,3 @@
-from CBD import *
-from ..modelo.ItemVenda import *
-
 class ControleItemVenda:
 
     def __init__(self):
@@ -26,7 +23,7 @@ class ControleItemVenda:
     def alterar(self, itemvenda):
         self.ob.abrirConexao();
         sql = "UPDATE itemvenda SET quantidade = '{}', valor = {} " \
-              "WHERE idvenda = {} AND idproduto = {}".format(
+              "WHERE idvenda = {} AND idProduto = {}".format(
                                     itemvenda.quantidade,
                                     itemvenda.valor,
                                     itemvenda.idVenda,
@@ -43,7 +40,7 @@ class ControleItemVenda:
 
     def procuraRegistro(self,entradaVenda, entradaProduto):
         self.ob.abrirConexao();
-        resultQuery = self.ob.selectQuery("SELECT * FROM itemvenda WHERE idvenda = {} AND idproduto = {}".format(
+        resultQuery = self.ob.selectQuery("SELECT * FROM itemvenda WHERE idvenda = {} AND idProduto = {}".format(
                                                                                     entradaVenda, entradaProduto))
         retorno = ItemVenda()
         if len(resultQuery) >= 1:

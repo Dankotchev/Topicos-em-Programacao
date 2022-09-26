@@ -1,0 +1,2 @@
+no terminal
+Pyuis -x arquivo.ui -o arquivo.py
