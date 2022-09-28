@@ -39,7 +39,7 @@ class Venda:
        self.__idCliente = entrada
 
    def __eq__(self,entrada): 
-       self.__xxxxxxxxxxx == entrada.xxxxxxx
+       self.__idVenda == entrada.idVenda
 
    def __repr__(self,entrada): 
        return "Id Venda #{}\tId Cliente #{}\nData da Venda: {}\tTotal da Venda: R$ {}"\

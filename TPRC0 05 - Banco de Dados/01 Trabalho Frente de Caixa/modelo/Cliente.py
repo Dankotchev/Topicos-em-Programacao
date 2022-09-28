@@ -1,26 +1,31 @@
 class Cliente: 
 
    def __init__(self):
-        __idCliente = '' 
-        __nome = '' 
-        __endereco = '' 
-        __telefone = '' 
-        __email = '' 
-        __cidade = '' 
-        __uf = '' 
-        __cep = '' 
+        self.__idCliente = ''
+        self.__nome = ''
+        self.__cpf = ''
+        self.__endereco = ''
+        self.__telefone = ''
+        self.__email = ''
+        self.__cidade = ''
+        self.__uf = ''
+        self.__cep = ''
 
    @property 
    def idCliente(self): 
-       return self.__idCliente 
+       return self.__idCliente
+
+   @property
+   def nome(self):
+       return self.__nome
 
    @property 
-   def nome(self): 
-       return self.__nome 
+   def endereco(self):
+       return self.__endereco
 
    @property 
-   def endereco(self): 
-       return self.__endereco 
+   def cpf(self):
+       return self.__cpf
 
    @property 
    def telefone(self): 
@@ -46,12 +51,15 @@ class Cliente:
    def idCliente(self,entrada): 
        self.__idCliente = entrada
 
-   @nome.setter 
-   def nome(self,entrada): 
+   @nome.setter
+   def nome(self,entrada):
        self.__nome = entrada
+   @cpf.setter
+   def cpf(self,entrada):
+       self.__cpf = entrada
 
-   @endereco.setter 
-   def endereco(self,entrada): 
+   @endereco.setter
+   def endereco(self,entrada):
        self.__endereco = entrada
 
    @telefone.setter 
@@ -75,7 +83,7 @@ class Cliente:
        self.__cep = entrada
 
    def __eq__(self,entrada): 
-       self.__xxxxxxxxxxx == entrada.xxxxxxx
+       self.__idCliente == entrada.idCliente
 
    def __repr__(self,entrada): 
-       return self.__xxxxxxxxxxx 
+       return "ID Cliente : {} \t- CPF: {}\nNome: {}".format(self.idCliente, self.cpf, self.nome)

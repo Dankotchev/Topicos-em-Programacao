@@ -12,7 +12,6 @@ class ControleVenda:
                                                                     venda.data,
                                                                     venda.valortotal,
                                                                     venda.idCliente)
-        print(sql)
         try:
             self.ob.execute(sql)
             self.ob.gravar()
@@ -21,7 +20,7 @@ class ControleVenda:
             self.ob.descarte()
 
     def alterar(self, venda):
-        self.ob.abrirConexao();
+        self.ob.abrirConexao()
         sql = "UPDATE venda SET data = '{}', valortotal = {}, idCliente = {}" \
               "WHERE idVenda = {}".format(
                                     venda.data,
@@ -37,9 +36,8 @@ class ControleVenda:
             self.ob.descarte()
 
 
-
     def procuraRegistro(self,entrada):
-        self.ob.abrirConexao();
+        self.ob.abrirConexao()
         resultQuery = self.ob.selectQuery("SELECT * FROM venda WHERE idVenda = {}".format(entrada))
         retorno = Venda()
         if len(resultQuery) >= 1:
@@ -50,7 +48,7 @@ class ControleVenda:
         return retorno
 
     def listarTodos(self):
-        self.ob.abrirConexao();
+        self.ob.abrirConexao()
         dados = self.ob.selectQuery("SELECT * FROM venda")
         print(dados)
         for venda in dados:
@@ -61,3 +59,10 @@ class ControleVenda:
             retorno.idCliente = venda[3]
         return dados
 
+    def procurarPorCliente(self, idClienteBusca):
+        self.ob.abrirConexao()
+        resultQuery = self.ob.selectQuery("SELECT * FROM venda WHERE idCliente = {}".format(idClienteBusca))
+        if len(resultQuery) < 1:
+            return -1
+        else:
+            return resultQuery

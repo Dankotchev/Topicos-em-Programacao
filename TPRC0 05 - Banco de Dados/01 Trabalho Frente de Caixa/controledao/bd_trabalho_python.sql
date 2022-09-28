@@ -2,14 +2,16 @@ create database bd_trabalho_python;
 use bd_trabalho_python;
 
 CREATE TABLE cliente (
-    idCliente   INT AUTO_INCREMENT PRIMARY KEY,
+    idCliente   INT AUTO_INCREMENT,
     nome        VARCHAR (60),
+    cpf         VARCHAR(16)
     endereco    VARCHAR(60),
     telefone    VARCHAR(18),
     email       VARCHAR(100),
     cidade      VARCHAR(60),
     uf          VARCHAR(2),
-    cep         VARCHAR(18)
+    cep         VARCHAR(18),
+    PRIMARY KEY (idCliente)
 );
 
 CREATE TABLE venda (
