@@ -1,11 +1,13 @@
-from controledao.ControleCliente import *
-from modelo.Cliente import *
-from controledao.ControleItemVenda import *
-from modelo.ItemVenda import *
-from controledao.ControleProduto import *
-from modelo.Produto import *
-from controledao.ControleVenda import *
-from modelo.Venda import *
+from builtins import int
+
+from ControleCliente import *
+from Cliente import *
+from ControleItemVenda import *
+from ItemVenda import *
+from ControleProduto import *
+from Produto import *
+from ControleVenda import *
+from Venda import *
 
 
 def cadastrarCliente():
