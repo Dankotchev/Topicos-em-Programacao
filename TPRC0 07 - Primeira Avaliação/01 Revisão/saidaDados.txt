@@ -1,0 +1,37 @@
+abobora ==> (4, 3)
+amoras framboesa torta slada ==> (11, 14)
+animais peixes lagartos cobras ==> (12, 15)
+casa bueiro ladrinho panelas ==> (12, 13)
+junqueiropolis assis osasco ==> (12, 13)
+oi ola ois olas ==> (8, 4)
+osvaldo julio fernanda gilberto ana ==> (14, 17)
+professores alunos tecnicos administrativos discentes docentes apoio suporte escola diretores secretarios ==> (41, 54)
+teste teste ==> (4, 6)
+um dois tres quatro cinco seis sete ==> (13, 16)
+uma linha que nao esta em branco ==> (13, 13)
+zebras aquaticas especiais de muito bom gosto de moda e politizadas ==> (28, 29)
+Linha: 8	Palavras: 11
+Resumo de ocorrências das Letras:
+a - 48	||||||||||||||||||||||||||||||||||||||||||||||||
+b - 9	|||||||||
+o - 44	||||||||||||||||||||||||||||||||||||||||||||
+r - 23	|||||||||||||||||||||||
+m - 10	||||||||||
+s - 47	|||||||||||||||||||||||||||||||||||||||||||||||
+f - 3	|||
+e - 38	||||||||||||||||||||||||||||||||||||||
+t - 24	||||||||||||||||||||||||
+l - 14	||||||||||||||
+d - 13	|||||||||||||
+n - 16	||||||||||||||||
+i - 30	||||||||||||||||||||||||||||||
+p - 8	||||||||
+x - 1	|
+g - 3	|||
+c - 14	||||||||||||||
+u - 12	||||||||||||
+h - 2	||
+j - 2	||
+q - 4	||||
+v - 2	||
+z - 2	||
