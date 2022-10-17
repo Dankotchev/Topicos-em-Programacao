@@ -58,6 +58,16 @@ class ControleCliente:
             print("Houve um erro")
             self.ob.descarte()
 
+    def deletarPorID(self, id):
+        self.ob.abrirConexao()
+        sql = "DELETE FROM cliente WHERE idCliente = {}".format(id)
+        try:
+            self.ob.execute(sql)
+            self.ob.gravar()
+        except:
+            print("Houve um erro")
+            self.ob.descarte()
+
     def retornarUltimoCliente(self, ultimoCliente):
         self.ob.abrirConexao()
         resultQuery = self.ob.selectQuery("SELECT * FROM cliente "

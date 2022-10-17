@@ -6,7 +6,7 @@ class Banco:
     def __init__(self):
         self.servidor = "localhost"
         self.usuario = "root"
-        self.senha = "ifsp"
+        self.senha = "dknilo"
         self.banco = "bd_trabalho_sistemavenda"
         self.ponteiro = ""
 

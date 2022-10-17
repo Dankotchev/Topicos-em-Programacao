@@ -1,3 +1,5 @@
+from typing import re
+
 from flask import Flask, render_template, request, redirect, url_for
 app = Flask(__name__)
 
@@ -20,7 +22,30 @@ def editar(id):
 @app.route('/delete/<id>')
 def delete(id):
     daoCliente = ControleCliente()
-    daoCliente.deletar(id)
+    daoCliente.deletarPorID(id)
+    return redirect(url_for('tabela'))
+
+@app.route('/gravar', methods = ['POST', 'GET'])
+def gravar():
+    if request.method == 'POST':
+       result = request.form
+       cliente = Cliente()
+       cliente.nome = result['nome']
+       cliente.cpf = result['cpf']
+       cliente.endereco = result['endereco']
+       cliente.telefone = result['telefone']
+       cliente.email = result['email']
+       cliente.cidade = result['cidade']
+       cliente.uf = result['uf']
+       cliente.cep = result['cep']
+       daoCliente = ControleCliente()
+
+       if result['botao']=='Gravar':
+           daoCliente.incluir(cliente)
+       else:
+           cliente.idCliente = int(result['codigo'])
+           daoCliente.alterar(cliente)
+
     return redirect(url_for('tabela'))
 
 import sys
