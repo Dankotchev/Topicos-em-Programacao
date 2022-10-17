@@ -1,0 +1,16 @@
+<html>
+   <body>
+      <form action = "http://localhost:5000/gravar" method = "POST">
+         <p>Codigo <input type ='text' name="codigo" value='{{dados.idCliente}}'></p>
+         <p>Nome <input type = "text" name = "nome" value ='{{dados.nome}}'></p>
+         <p>CPF <input type = "text" name = "cpf" value ='{{dados.cpf}}'></p>
+         <p>Endereco <input type = "text" name = "endereco" value = '{{dados.endereco}}'></p>
+         <p>Telefone <input type = "text" name = "telefone" value ='{{dados.telefone}}'></p>
+         <p>E-mail <input type = "text" name = "email" value ='{{dados.email}}'></p>
+         <p>Cidade<input type = "text" name = "cidade" value = '{{dados.cidade}}'></p>
+         <p>UF <input type ="text" name = "uf" value = '{{dados.uf}}'></p>
+         <p>CEP<input type ="text" name = "cep" value = '{{dados.cep}}'></p>
+         <p><input type = "submit" value = "Alterar" name='botao'/></p>
+      </form>
+   </body>
+</html>

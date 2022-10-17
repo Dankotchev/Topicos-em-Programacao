@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+   <body>
+      <table border = 1>
+                <th><td>Codigo</td><td>Nome</td><td>Cidade</td><td>Uf</td><td>CEP</td><td>Nascimento</td><td colspan="3">Comandos</td></th>
+
+         {% for x in result%}
+            <tr>
+               <td> {{x[0]}} </td><td> {{ x[1]}} </td><td> {{ x[3]}} </td><td> {{ x[4]}} </td><td> {{ x[5]}} </td>
+               <td><a href='/'>Incluir</a></td>
+               <td><a href='/editar/{{x[0]}}'>Editar</a></td>
+               <td><a href='/delete/{{x[0]}}'>Apagar</a></td>
+            </tr>
+         {% endfor %}
+      </table>
+   </body>
+</html>

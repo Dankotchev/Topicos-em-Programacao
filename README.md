@@ -11,3 +11,7 @@ A disciplina ministrada pelo professor Vilson Francisco Maziero.
 
 - Introdução a Linguagem Python;
 - Lista de Exercícios: Aquecimento V Maratona de Programação INTERIF 2022
+- Classes e Heranças
+- Banco de Dados
+- Interfaces Gráficas utilizando Qt
+- Web
